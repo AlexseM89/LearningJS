@@ -12,8 +12,25 @@ console.log("кот" > "код");
 "2" + 2 * "2";
 console.log("2" + 2 * "2");
 
-/* 3- true, оба значения преобразуюися в логические значения. null = false и undefined = false следовательно
+/* 3- true, оба значения преобразуюися в логические значения. null = false и undefined = false следовательно при сравнении будет true
  */
 undefined == null;
 console.log(undefined == null);
-//
+
+/* 4- false , оба значения преобразуюися в логические значения. null = false и undefined = false сделовательно false != false это false*/
+undefined != null;
+console.log(undefined != null);
+/* 5- операнды не являются одним и тем же типом, null-object, 0-number. Используется абстрактный алгоритм сравнения для равенства
+результат вернет  false */
+null == 0;
+console.log(null == 0);
+
+/* 6- false  При сравнении значений разных типов JavaScript приводит каждое из них к числу в итоге число 2 не может быть больше числа 3*/
+2 > "3";
+console.log(2 > "3");
+
+/* 7- оператор - приводит все к числам null-0 false-0 получаем 0-0. 0+true = 1 так как true это 1 */
+null - false + true;
+console.log(null - false + true);
+
+/* */
