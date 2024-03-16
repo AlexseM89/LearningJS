@@ -176,4 +176,4 @@ for (var day = 1; N >= M; day++) {
     N = N / 2;
     console.log(day);
 }
-console.log(day);
+// console.log(day);
