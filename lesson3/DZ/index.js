@@ -128,23 +128,114 @@
 /* 1  Переменная num может принимать 4 значения: 1, 2, 3 или 4. Если она имеет значение '1', то в переменную result запишем 'зима',
  если имеет значение '2' – 'весна' и так далее. Решите задачу через switch-case. */
 
-const num = "5";
-let result;
-switch (num) {
-    case "1":
-        result = "зима";
-        break;
-    case "2":
-        result = "весна";
-        break;
-    case "3":
-        result = "лето";
-        break;
-    case "4":
-        result = "осень";
-        break;
-    default:
-        result = "Переменная num может принимать 4 значения: 1, 2, 3 или 4";
-        break;
-}
-console.log(result);
+// const num = "5";
+// let result;
+// switch (num) {
+//     case "1":
+//         result = "зима";
+//         break;
+//     case "2":
+//         result = "весна";
+//         break;
+//     case "3":
+//         result = "лето";
+//         break;
+//     case "4":
+//         result = "осень";
+//         break;
+//     default:
+//         result = "Переменная num может принимать 4 значения: 1, 2, 3 или 4";
+//         break;
+// }
+// console.log(result);
+
+//################################## ~~~ Общие задачи ~~~ ##################################
+
+/* 1 В переменной day лежит какое-то число из интервала от 1 до 31.
+ Определите в какую декаду месяца попадает это число (в первую, вторую или третью).*/
+// let day = 30;
+// if (day >= 1 && day <= 10) {
+//     console.log(`Число ${day} поподает в первую декаду месяца`);
+// } else if (day >= 11 && day <= 20) {
+//     console.log(`Число ${day} поподает во вторую декаду месяца`);
+// } else if (day >= 21 && day <= 31) {
+//     console.log(`Число ${day} поподает в третью декаду месяца`);
+// }
+
+/* 2 В переменной month лежит какое-то число из интервала от 1 до 12. 
+Определите в какую пору года попадает этот месяц (зима, лето, весна, осень).*/
+// let month = 12;
+// if (month === 1 || month === 2 || month === 12) {
+//     console.log(`Это зима!`);
+// } else if (month === 3 || month === 4 || month === 5) {
+//     console.log(`Это  весна!`);
+// } else if (month === 6 || month === 7 || month === 8) {
+//     console.log(`Это  лето!`);
+// } else if (month === 9 || month === 10 || month === 11) {
+//     console.log(`Это  осень!`);
+// }
+
+//################################## ~~~ Циклы while и for ~~~ ##################################
+
+/* 1 Выведите столбец чисел от 1 до 100.*/
+//while
+// let num = 1;
+// while (num > 0 && num < 101) {
+//     console.log(num);
+//     num++;
+// }
+
+//for
+// for (let i = 1; i < 101; i++) {
+//     console.log(i);
+// }
+
+/* 2  Выведите столбец чисел от 11 до 33.*/
+//while
+// let num = 11;
+// while (num > 10 && num < 34) {
+//     console.log(num);
+//     num++;
+// }
+
+//for
+// for (let i = 11; i < 34; i++) {
+//     console.log(i);
+// }
+
+/* 3  Выведите столбец четных чисел в промежутке от 0 до 100.*/
+//while
+// let num = 0;
+// while (num >= 0 && num < 101) {
+//     if (num % 2 == 0) {
+//         console.log(num);
+//     }
+//     num++;
+// }
+
+//for
+// for (let num = 0; num >= 0 && num < 101; num++) {
+//     num % 2 == 0 ? console.log(num) : num;
+// }
+
+/* 4 С помощью цикла найдите сумму чисел от 1 до 100.*/
+//while
+// let num = 1;
+// let sum = 0;
+// while (num > 0 && num < 101) {
+//     sum = sum + num;
+//     num++;
+// }
+// console.log(sum);
+
+//for
+// let sum = 0;
+// for (let i = 1; i >= 1 && i <= 100; i++) {
+//     sum = sum + i;
+// }
+// console.log(sum);
+/**/
+/**/
+/**/
+/**/
+/**/
