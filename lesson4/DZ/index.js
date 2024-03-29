@@ -76,9 +76,9 @@ const compare = function showCompare(numb1, numb2) {
     let resCompare;
     if (typeof numb1 === "number" && typeof numb2 === "number") {
         if (numb1 === numb2) {
-            resCompare = "true";
+            resCompare = true;
         } else {
-            resCompare = "false";
+            resCompare = false;
         }
     } else {
         console.log("Введите числа");
