@@ -237,7 +237,18 @@ function count(str, stringsearch) {
 console.log("#19:", count(str19, "во"));
 console.log("#19:", count(str19, "я"));
 
-/* */
+/* 20. Напишите функцию strip(str), которая удаляет все лишние пробелы из строки str.*/
+const str20 =
+    "   Напишите функцию,     которая     удаляет      все     лишние       пробелы     из      строки     str.  ";
+function strip(str) {
+    return str
+        .split(" ")
+        .filter((word) => word !== "")
+        .join(" ");
+}
+
+console.log("#20:", strip(str20));
+
 /* */
 /* */
 /* */
