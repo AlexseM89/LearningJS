@@ -202,9 +202,41 @@ function getSubstr(str, char, pos) {
 }
 console.log("#16:", getSubstr(str16, "щ", "before"));
 console.log("#16:", getSubstr(str16, "щ", "after"));
-/* */
-/* */
-/* */
+
+/* 17. Напишите функцию insert(str, substr, pos), которая вставляет подстроку substr в указанную позицию pos строки str.
+ По умолчанию подстрока вставляется в начало строки.*/
+const str17 =
+    "Напишите функцию, которая вставляет подстроку substr в указанную позицию";
+function insert(str, substr, pos = 0) {
+    return str.slice(0, pos) + substr + str.slice(pos);
+}
+
+console.log("#17:", insert(str17, "JS ", 9));
+console.log("#17:", insert(str17, "JS "));
+
+/* 18. Напишите функцию limitStr(str, n, symb),
+ которая обрезает строку, если она длиннее указанного количества символов n. 
+ Усеченная строка должна заканчиваться троеточием «...» (если не задан параметр symb) или заданным символом symb.*/
+const str18 =
+    "Функция которая обрезает строку, если она длиннее указанного количества символов";
+function limitStr(str, n, symb = "...") {
+    return str.length > n ? str.slice(0, n) + symb : str;
+}
+
+console.log("#18:", limitStr(str18, 12, "."));
+console.log("#18:", limitStr(str18, 12));
+console.log("#18:", limitStr(str18, 112));
+
+/* 19. Напишите функцию count(str, stringsearch), которая возвращает количество символов stringsearch в строке str.*/
+
+const str19 = "Которая возвращает количество символов";
+function count(str, stringsearch) {
+    return [...str.matchAll(stringsearch)].length;
+}
+
+console.log("#19:", count(str19, "во"));
+console.log("#19:", count(str19, "я"));
+
 /* */
 /* */
 /* */
