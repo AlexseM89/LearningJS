@@ -190,7 +190,18 @@ function endsWith(str1, str2) {
 console.log("#15:", endsWith(str15, str15_2));
 console.log("#15:", endsWith(str15, str15_3));
 
-/* */
+/* 16. Напишите функцию getSubstr(str, char, pos), которая возвращает часть строки, 
+расположенную после или до указанного символа char в зависимости от параметра pos. */
+
+const str16 = "Функция которая возвращает часть строки";
+function getSubstr(str, char, pos) {
+    let searchIndex = str.indexOf(char);
+    return pos === "before"
+        ? str.slice(0, searchIndex)
+        : str.slice(searchIndex + char.length);
+}
+console.log("#16:", getSubstr(str16, "щ", "before"));
+console.log("#16:", getSubstr(str16, "щ", "after"));
 /* */
 /* */
 /* */
