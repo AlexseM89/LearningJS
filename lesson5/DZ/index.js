@@ -249,7 +249,13 @@ function strip(str) {
 
 console.log("#20:", strip(str20));
 
-/* */
-/* */
-/* */
-/* */
+/* 21. Напишите функцию cutString(str, n), которая удаляет лишние слова из строки str, оставив в ней n слов.*/
+
+const str21 = "Напишите функцию, которая удаляет лишние слова из строки";
+function cutString(str, n) {
+    return str.split(" ", n).join(" ");
+}
+
+console.log("#21:", cutString(str21, 5));
+
+/* 22. Напишите функцию findWord(word, str), которая проверяет, существует ли в строке str слова word.*/
