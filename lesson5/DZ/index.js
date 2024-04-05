@@ -259,3 +259,12 @@ function cutString(str, n) {
 console.log("#21:", cutString(str21, 5));
 
 /* 22. Напишите функцию findWord(word, str), которая проверяет, существует ли в строке str слова word.*/
+const str22 =
+    "Напишите функцию, которая проверяет, существует ли в строке str слова";
+function findWord(word, str) {
+    return str.match(word) != null
+        ? "Существуют слова word"
+        : "Не существуют слова word";
+}
+console.log("#22:", findWord("ли", str22));
+console.log("#22:", findWord("Привет", str22));
