@@ -114,16 +114,18 @@ console.log("#7:", sum(1)(2)(3));
 При достижении точки завершения в консоль выводится значение таймера и 
 сообщение о завершении работы таймера.*/
 
-
-function timer(start, end){
-    return timerStart(){
-        if(start>end){
-            start=start-1
-            console.log(start)
-            timer(start,end)
-        }else{console.log("Finish",end)}
-    }
-    timerStart
+function createTimer(start, end) {
+    let count = start;
+    return function timer() {
+        count--;
+        console.log(count);
+        if (count > end) {
+            console.log(`До старта ${count} секунд`);
+            timer();
+        } else {
+            console.log(`До старта ${count} секунд. Поехали!`);
+        }
+    };
 }
-
-timer(15,1)
+let start = createTimer(10, 0);
+start();
