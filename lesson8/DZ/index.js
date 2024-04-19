@@ -164,3 +164,31 @@ surname (фамилия, наследуется от User), year (год пос�
 текущий курс студента (от 1 до 5). Курс вычисляется так: нужно от текущего года
 отнятьгод поступления в вуз.
 Текущий год получите самостоятельно с помощью new Date.*/
+
+class User {
+    constructor(name, surname) {
+        this.name = name;
+        this.surname = surname;
+    }
+    getFullName() {
+        console.log(`${this.name} ${this.surname}`);
+    }
+}
+class Student extends User {
+    constructor(name, surname, year) {
+        super(name, surname);
+        this.year = year;
+    }
+    getCourse() {
+        const thisYear = new Date().getFullYear();
+        const course = thisYear - this.year;
+        console.log(course + " курс");
+    }
+}
+
+const studentFirst = new Student("Anton", "Chehov", 2023);
+const studentSecond = new Student("Ilon", "Mask", 2020);
+studentFirst.getFullName();
+studentFirst.getCourse();
+studentSecond.getFullName();
+studentSecond.getCourse();
