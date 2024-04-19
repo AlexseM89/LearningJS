@@ -122,5 +122,45 @@ firstString.ucWords();
    если не является - то false. Кроме того, класс будет иметь следующие методы:
     метод isDomain для проверки домена,
  метод isDate для проверки даты и метод isPhone для проверки телефона.*/
+class Validator {
+    constructor() {}
+    isEmail(str) {
+        return (
+            str.indexOf("@") !== -1 &&
+            str.indexOf(".") !== -1 &&
+            str.indexOf("mail") !== -1
+        );
+    }
+    isDomain(str) {
+        return str.indexOf(".com") !== -1 || str.indexOf(".ru") !== -1;
+    }
+    isDate(str) {
+        return str.match(/[0-9]{2}\.[0-9]{2}\.[0-9]{4}/) != null ? true : false;
+    }
+    isPhone(str) {
+        return str.match(/\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}/) != null
+            ? true
+            : false;
+    }
+}
+let stringValid = new Validator();
+console.log(stringValid.isEmail("melenchuk89@gmail.com"));
+console.log(stringValid.isEmail("melenchuk89@mail.ru"));
+console.log(stringValid.isEmail("melenchuk89@com"));
+console.log(stringValid.isDomain("https://yandex.ru"));
+console.log(stringValid.isDomain("https://яндекс.рф"));
+console.log(stringValid.isDate("19.04.2024"));
+console.log(stringValid.isDate("19.04.24"));
+console.log(stringValid.isPhone("+7(915)939-52-00"));
+console.log(stringValid.isPhone("+375(915)939-52-00"));
 
-/* */
+/* 6. Реализуйте класс Student (Студент), который будет наследовать от класса User,
+ подобно тому, как это сделано в теоретической части урока.
+Этот класс должен иметь следующие свойства: name (имя, наследуется от User),
+surname (фамилия, наследуется от User), year (год поступления в вуз).
+Класс должен иметь метод getFullName() (наследуется от User),
+с помощью которого можно вывести одновременно имя и фамилию студента.
+Также класс должен иметь метод getCourse(), который будет выводить 
+текущий курс студента (от 1 до 5). Курс вычисляется так: нужно от текущего года
+отнятьгод поступления в вуз.
+Текущий год получите самостоятельно с помощью new Date.*/
